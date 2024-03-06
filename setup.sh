@@ -15,12 +15,15 @@ systemctl enable lightdm.service --force
 
 echo "Configuring greeter..."
 
-pkg=$(ls -1 /usr/share/xgreeters/ | grep "web")
-echo "\n[Seat:*]\ngreeter-session=$pkg\n" | tee -a /etc/lightdm/lightdm.conf 
+echo "\n[Seat:*]\ngreeter-session=web-greeter\nuser-session=qtile\n" | tee -a /etc/lightdm/lightdm.conf 
 
 echo "Moving config files..."
 
 rsync -rcxP ./files/ ~/
 rm -rf /files
+
+echo "Moving data..."
+
+mv ./ones/owl_house_dg.png /usr/share/pixmaps/owl_house_bg.png
 
 echo "All done!"

@@ -34,7 +34,7 @@ from libqtile.utils import guess_terminal
 import os
 
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "alacritty"
 
 os.system("picom -b")
 
@@ -274,7 +274,7 @@ screens = [
             background=COLOR["dark-purple"]
             #margin=[4, 0, 0, 0]
         ),
-        wallpaper="/usr/share/pixmaps/owl_house.png",
+        wallpaper="/usr/share/pixmaps/owl_house_bg.png",
     ),
 ]
 
