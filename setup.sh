@@ -7,7 +7,7 @@ pacman -S xonsh qtile alacritty lightdm picom ttf-jetbrains-mono-nerd sublime-te
 
 echo "Installing AUR packages..."
 
-pmac build web-greeter qtile-extras
+pamac build web-greeter qtile-extras
 
 echo "Starting lighdm"
 
@@ -20,7 +20,7 @@ echo "\n[Seat:*]\ngreeter-session=$pkg\n" | tee -a /etc/lightdm/lightdm.conf
 
 echo "Moving config files..."
 
-rsync -rcxP /files/ ~/
+rsync -rcxP ./files/ ~/
 rm -rf /files
 
 echo "All done!"
