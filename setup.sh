@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 echo "Installing packages..."
 
@@ -7,7 +7,7 @@ pacman -S xonsh qtile alacritty lightdm picom ttf-jetbrains-mono-nerd sublime-te
 
 echo "Installing AUR packages..."
 
-yay -S web-greeter qtile-extras
+pmac build web-greeter qtile-extras
 
 echo "Starting lighdm"
 
@@ -15,11 +15,12 @@ systemctl enable lightdm.service --force
 
 echo "Configuring greeter..."
 
-echo "[Seat:*]\ngreeter-session=${ls -1 /usr/share/xgreeters/ | grep \"web\"}\n" >> /etc/lightdm/lightdm.conf 
+pkg=$(ls -1 /usr/share/xgreeters/ | grep "web")
+echo "\n[Seat:*]\ngreeter-session=$pkg\n" | tee -a /etc/lightdm/lightdm.conf 
 
 echo "Moving config files..."
 
-rsync -rcx /files ~/
-rm -r /files
+rsync -rcxP /files/ ~/
+rm -rf /files
 
 echo "All done!"
