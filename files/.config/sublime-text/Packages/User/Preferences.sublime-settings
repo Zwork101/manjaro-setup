@@ -2,7 +2,7 @@
 	"color_scheme": "Catppuccin Mocha.sublime-color-scheme",
 	"theme": "Adaptive.sublime-theme",
 	"font_face": "JetBrainsMono Nerd Font",
-	"font_size": 11,
+	"font_size": 14,
 	"scroll_speed": 1.5,
 	"hardware_acceleration": "opengl"
 }

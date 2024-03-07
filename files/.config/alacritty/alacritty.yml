@@ -12,7 +12,7 @@
 #  - /path/to/alacritty.yml
 
 import:
-  - /.config/alacritty/catppuccin-latte.yml
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.toml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -142,14 +142,14 @@ font:
   bold:
     family: JetBrainsMono Nerd Font
     style: Bold
-  italics:
-    family: JetBrainsMono Nerd Font
-    style: Italic
+  # italics:
+  #   family: JetBrainsMono Nerd Font
+  #   style: Italic
   bold_italic:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
 
-  size: 13
+  size: 14
 
 # Font configuration
 #font:
