@@ -1,3 +1,6 @@
 [submodule "files/.config/sublime-text/Packages/Catppuccin"]
 	path = files/.config/sublime-text/Packages/Catppuccin
 	url = https://github.com/catppuccin/sublime-text.git
+[submodule "files/.config/alacritty/catppuccin"]
+	path = files/.config/alacritty/catppuccin
+	url = https://github.com/catppuccin/alacritty.git
