@@ -149,7 +149,16 @@ for num, i in enumerate(groups):
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=[], border_width=3),
+    layout.Columns(
+        border_focus_stack=[], 
+        border_width=3,
+        margin_on_single=[20, 40, 20, 40],
+        margin=[10, 20, 10, 20],
+        border_focus=COLOR["yellow"],
+        border_normal=COLOR["dark-purple"],
+        border_normal_stack=COLOR["purple"],
+        border_on_single=True
+    ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
